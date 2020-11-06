@@ -1,38 +1,60 @@
-.App {
-  text-align: center;
+#main-menu {
+    padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav-logo {
+    height: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.search-bar {
+    height: 53px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0 0 7px;
+    border-radius: 27px;
+    padding: 0 20px;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.search-bar input {
+    height: 100%;
+    width: 380px;
+    border: none;
+    background-color: transparent;
 }
 
-.App-link {
-  color: #61dafb;
+.search-bar input::placeholder {
+    color: #DC5456;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search-bar button {
+    height: 32px;
+    width: 32px;
+    /*box-shadow: rgba(0, 0, 0, 0.15) 0 0 7px;
+    border-radius: 16px;*/
+    border: none;
+    background-color: transparent;
+}
+
+.hotels-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hotels-container .row {
+    border: 1px solid black;
+}
+
+.btn-primary {
+    background-color: #051079;
+}
+
+.btn-info {
+    background-color: #FFC424;
+    border-radius: 20px;
+    padding: 0 10px;
+}
+
+.btn-secondary {
+    background-color: #DC5456;
+    border-radius: 20px;
+    padding: 0 10px;
 }
