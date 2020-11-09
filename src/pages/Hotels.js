@@ -8,7 +8,7 @@ import MaxGuestsBtn from '../components/MaxGuestsBtn';
 
 function Hotels() {
     return (
-        <div class="container hotels-container">
+        <div class="hotels-container">
                 <div class="row">
                     <div class="col-md">
                         One of three columns

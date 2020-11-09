@@ -1,10 +1,6 @@
 import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import Image from 'react-bootstrap/Image';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 
 import SearchBar from './SearchBar';
 
@@ -17,8 +13,8 @@ function MainMenu() {
             <Navbar.Collapse id="basic-navbar-nav" class="w-100 d-flex justify-content-between align-items-center">
 
                 <Nav>
-                    <Nav.Link href="#">Hotels</Nav.Link>
-                    <Nav.Link href="#">Contact</Nav.Link>
+                    <Nav.Link href="/hotels">Hotels</Nav.Link>
+                    <Nav.Link href="/contact">Contact</Nav.Link>
                 </Nav>
 
                 <SearchBar />
