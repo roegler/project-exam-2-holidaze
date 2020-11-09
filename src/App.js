@@ -9,34 +9,38 @@ import Footer from './components/Footer';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 
-
 function App() {
+  const isHome = window.location.pathname == "/"
   return (
     <div className="App">
-      <MainMenu />
+      <MainMenu displaySearchBar={isHome == false} />
 
-      <div class="container">
-        <Router>
-          <Switch>
-            <Route path="/hotels">
+      <Router>
+        <Switch>
+          <Route path="/hotels">
+            <div class="container">
               <Hotels />
-            </Route>
-            <Route path="/contact">
+            </div>
+          </Route>
+
+
+          <Route path="/contact">
+            <div class="container">
               <Contact />
-            </Route>
-            <Route path="/">
-              <HomePage />
-            </Route>
-          </Switch>
-        </Router>
-      </div>
+            </div>
+          </Route>
+
+          <Route path="/">
+            <HomePage />
+          </Route>
+        </Switch>
+      </Router>
 
       <Footer />
-    </div>
+    </div >
   );
 }
 

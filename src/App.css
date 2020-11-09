@@ -6,19 +6,24 @@
     height: 30px;
 }
 
+#home-page-bg {
+    background-image: url("../src/images/background-img-home.jpg");
+    background-position: center;
+    width: 100vw;
+}
+
 .search-bar {
     height: 53px;
     box-shadow: rgba(0, 0, 0, 0.15) 0 0 7px;
     border-radius: 27px;
     padding: 0 20px;
-
+    background-color: #ffffff;
 }
 
 .search-bar input {
     height: 100%;
     width: 380px;
     border: none;
-    background-color: transparent;
 }
 
 .search-bar input::placeholder {
@@ -40,21 +45,35 @@
 }
 
 .hotels-container .row {
-    border: 1px solid black;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .btn-primary {
     background-color: #051079;
+    border: 1px solid #051079;
+}
+
+.btn-primary:hover {
+    color: #000000;
+    border: 1px solid #051079;
+    background-color: transparent;
 }
 
 .btn-info {
     background-color: #FFC424;
     border-radius: 20px;
     padding: 0 10px;
+    border: none;
 }
 
 .btn-secondary {
     background-color: #DC5456;
     border-radius: 20px;
     padding: 0 10px;
+    border: none;
+}
+
+.screen-height {
+    height: 75vh;
 }

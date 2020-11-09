@@ -17,7 +17,7 @@ function Footer() {
                 </Nav>
 
                 <Nav>
-                    <Nav.Link href="#">Contact</Nav.Link>
+                    <Nav.Link href="/contact">Contact</Nav.Link>
                 </Nav>
 
             </Navbar.Collapse>

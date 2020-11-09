@@ -6,7 +6,7 @@ import SearchBar from './SearchBar';
 
 import logo from '../images/logo.svg';
 
-function MainMenu() {
+function MainMenu(props) {
     return (
         <Navbar bg="white" expand="lg" id='main-menu'>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -17,7 +17,9 @@ function MainMenu() {
                     <Nav.Link href="/contact">Contact</Nav.Link>
                 </Nav>
 
-                <SearchBar />
+                {props.displaySearchBar == true &&
+                    <SearchBar />
+                }
 
                 <Nav>
                     <Nav.Link href="/">
