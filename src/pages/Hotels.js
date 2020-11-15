@@ -3,21 +3,17 @@ import HotelCard from '../components/HotelCard';
 
 function Hotels() {
     return (
-        <div class="hotels-container mt-4">
+        <div class="mt-4">
             <div class="row">
-                <div class="col-md">
+                <div class="col-lg-4">
                     <HotelCard />
                 </div>
-            </div>
 
-            <div class="row">
-                <div class="col-md">
+                <div class="col-lg-4">
                     <HotelCard />
                 </div>
-            </div>
 
-            <div class="row">
-                <div class="col-md">
+                <div class="col-lg-4">
                     <HotelCard />
                 </div>
             </div>

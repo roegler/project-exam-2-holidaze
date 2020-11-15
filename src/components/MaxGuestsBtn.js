@@ -2,7 +2,7 @@ import React from 'react';
 
 function MaxGuestsBtn() {
     return (
-        <button type="button" class="btn btn-secondary">Max 4 guests</button>
+        <span class="pill pill-red">Max 4 guests</span>
     );
 }
 export default MaxGuestsBtn;

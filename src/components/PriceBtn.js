@@ -2,7 +2,7 @@ import React from 'react';
 
 function PriceBtn() {
     return (
-        <button type="button" class="btn btn-info ml-3">Price from</button>
+        <span class="pill pill-yellow">Price from</span>
     );
 }
 

@@ -17,7 +17,7 @@ function MainMenu(props) {
                     <Nav.Link href="/contact">Contact</Nav.Link>
                 </Nav>
 
-                {props.displaySearchBar == true &&
+                {props.displaySearchBar === true &&
                     <SearchBar />
                 }
 

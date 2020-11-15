@@ -39,16 +39,6 @@
     background-color: transparent;
 }
 
-.hotels-container {
-    display: flex;
-    justify-content: space-between;
-}
-
-.hotels-container .row {
-    flex-direction: column;
-    justify-content: center;
-}
-
 .btn-primary {
     background-color: #051079;
     border: 1px solid #051079;
@@ -78,6 +68,34 @@
     height: 75vh;
 }
 
-.form {
-    width: 40%;
+.map {
+    height: 400px;
+    border: none;
+}
+
+.pill {
+    border-radius: 24px;
+    padding: 5px 15px;
+    font-size: 0.8em;
+    margin-right: 10px;
+}
+
+.pill-red {
+    background-color: #DC5456;
+    color: #ffffff;
+}
+
+.pill-yellow {
+    background-color: #FFC424;
+    color: #ffffff;
+}
+
+.card-shadow {
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#footer-menu {
+    margin-top: 20px;
 }

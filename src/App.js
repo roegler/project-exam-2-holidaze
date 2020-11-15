@@ -13,10 +13,10 @@ import {
 } from "react-router-dom";
 
 function App() {
-  const isHome = window.location.pathname == "/"
+  const isHome = window.location.pathname === "/"
   return (
     <div className="App">
-      <MainMenu displaySearchBar={isHome == false} />
+      <MainMenu displaySearchBar={isHome === false} />
 
       <Router>
         <Switch>

@@ -7,12 +7,17 @@ import test_img from '../images/test_img.jpg'
 
 function HotelCard() {
     return (
-        <div>
-            <img src={test_img} alt='test img' height="200" class='mb-3'/>
-            < MaxGuestsBtn />
-            < PriceBtn />
-            <p>Lorem ipsum</p>
-            < BookNowBtn />
+        <div class="card-shadow">
+            <img src={test_img} alt='test img' height="200" class='w-100' />
+            <div class="px-3 pb-3">
+                <div class="my-3">
+                    <MaxGuestsBtn />
+                    <PriceBtn />
+                </div>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque in risus urna.</p>
+                <BookNowBtn />
+            </div>
         </div>
 
     );
