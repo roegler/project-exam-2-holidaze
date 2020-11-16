@@ -11,21 +11,27 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import HotelDetails from './pages/HotelDetails';
 
 function App() {
   const isHome = window.location.pathname === "/"
   return (
-    <div className="App">
+    <div className="app">
       <MainMenu displaySearchBar={isHome === false} />
 
       <Router>
         <Switch>
+        <Route path="/hotels/:id">
+            <div class="container">
+              <HotelDetails />
+            </div>
+          </Route>
+
           <Route path="/hotels">
             <div class="container">
               <Hotels />
             </div>
           </Route>
-
 
           <Route path="/contact">
             <div class="container">

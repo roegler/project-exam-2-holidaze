@@ -3,23 +3,25 @@ import MaxGuestsBtn from './MaxGuestsBtn';
 import PriceBtn from './PriceBtn';
 import BookNowBtn from './BookNowBtn';
 
-import test_img from '../images/test_img.jpg'
-
-function HotelCard() {
+function HotelCard(props) {
     return (
         <div class="card-shadow">
-            <img src={test_img} alt='test img' height="200" class='w-100' />
+            <img src={props.image} alt='selected hotel' height="200" class='w-100' />
             <div class="px-3 pb-3">
-                <div class="my-3">
-                    <MaxGuestsBtn />
-                    <PriceBtn />
+                <div class="mt-3 mb-4">
+                    <MaxGuestsBtn maxGuests={props.maxGuests}/>
+                    <PriceBtn price={props.price}/>
                 </div>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque in risus urna.</p>
-                <BookNowBtn />
+                <h4>{props.name}</h4>
+                <hr />
+                <p>{props.description}</p>
+
+                <div class="text-right">
+                    <BookNowBtn id={props.id} />
+                </div>
             </div>
         </div>
-
     );
 }
 

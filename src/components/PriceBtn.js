@@ -1,8 +1,8 @@
 import React from 'react';
 
-function PriceBtn() {
+function PriceBtn(props) {
     return (
-        <span class="pill pill-yellow">Price from</span>
+    <span class="pill">Price from <strong>{props.price}$</strong></span>
     );
 }
 

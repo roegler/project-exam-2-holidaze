@@ -6,7 +6,7 @@ function Contact() {
     return (
         <div class="row my-5">
             <div class="col-sm-6">
-                <Map />
+                <Map query="bergen" />
             </div>
             <div class="col-sm-6">
                 <ContactForm />
