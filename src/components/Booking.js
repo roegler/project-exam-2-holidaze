@@ -4,7 +4,7 @@ import * as yup from "yup";
 import { yupResolver } from '@hookform/resolvers/yup';
 import Form from 'react-bootstrap/Form';
 import { Modal, closeButton } from 'react-bootstrap'
-import BookNowBtn from './BookNowBtn'
+import InquiryBtn from './InquiryBtn';
 
 function Booking(props) {
     const schema = yup.object().shape({
@@ -49,22 +49,20 @@ function Booking(props) {
             <Modal.Body>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <Form.Group>
-                        <div className="row d-flex align-items-start flex-column">
-                            <div className="col-sm-6 pb-2">
+                        <div className="row">
+                            <div className="col-sm-12 pb-2">
                                 <Form.Control type="text" placeholder="First name *" name="firstName" ref={register} />
                                 {errors.firstName && <p className="text-danger pl-2"><small>{errors.firstName.message}</small></p>}
                             </div>
 
-                            <div className="col-sm-6 pb-4">
+                            <div className="col-sm-12 pb-2">
                                 <Form.Control type="text" placeholder="Last name *" name="lastName" ref={register} />
                                 {errors.lastName && <p className="text-danger pl-2"><small>{errors.lastName.message}</small></p>}
                             </div>
 
-                            <div className="email-input-field">
-                                <div className="col-sm-6 pb-4">
-                                    <Form.Control type="text" placeholder="Email *" name="email" ref={register} />
-                                    {errors.email && <p className="text-danger pl-2"><small>{errors.email.message}</small></p>}
-                                </div>
+                            <div className="col-sm-12 pb-2">
+                                <Form.Control type="text" placeholder="Email *" name="email" ref={register} />
+                                {errors.email && <p className="text-danger pl-2"><small>{errors.email.message}</small></p>}
                             </div>
 
                             <div className="col-sm-6 pb-2">
@@ -72,28 +70,37 @@ function Booking(props) {
                                 {errors.startDate && <p className="text-danger pl-2"><small>{errors.startDate.message}</small></p>}
                             </div>
 
-                            <div className="col-sm-6">
+                            <div className="col-sm-6 pb-2">
                                 <Form.Control type="date" placeholder="End date *" name="endDate" ref={register} />
                                 {errors.endDate && <p className="text-danger pl-2"><small>{errors.endDate.message}</small></p>}
                             </div>
 
-                            <label htmlFor="sel1">Select number of guests: </label>
-                            <select id="sel1" className=" ml-3 mb-4">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
 
-                            <label htmlFor="sel1">Select number of room: </label>
-                            <select id="sel1" className=" ml-3 mb-4">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
+                            <div className="col-sm-6 pb-2">
+                                <label htmlFor="sel1">Select number of guests: </label>
+                                <select id="sel1" className="ml-1">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                </select>
+                            </div>
+
+                            <div className="col-sm-6 pb-2">
+                                <label htmlFor="sel1">Select number of room: </label>
+                                <select id="sel1" className="ml-1">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
 
                         </div>
 
@@ -102,9 +109,7 @@ function Booking(props) {
             </Modal.Body>
 
             <Modal.Footer>
-                <button type="submit" className="btn btn-holidaze-primary">
-                    Send inquiry
-                </button>
+                <InquiryBtn id={props.id} title={"SUBMIT"}/>
             </Modal.Footer>
         </Modal>
     );

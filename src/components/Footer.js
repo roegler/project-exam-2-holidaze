@@ -20,6 +20,11 @@ function Footer() {
                     <Nav.Link href="/contact">Contact</Nav.Link>
                 </Nav>
 
+                <Nav>
+                    <small>Button icons from heroicons.dev</small>
+                </Nav>
+
+
             </Navbar.Collapse>
         </Navbar>
     );

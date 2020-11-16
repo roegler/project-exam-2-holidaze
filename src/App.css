@@ -96,8 +96,8 @@ a:hover {
     text-decoration: none;
 }
 
-.email-input-field {
-    width: 100%;
+.modal-content {
+    border: none;
 }
 
 .btn-holidaze-primary {
@@ -108,6 +108,17 @@ a:hover {
 
 .btn-holidaze-primary:hover {
     color: #DC5456;
+    background-color: transparent;
+}
+
+.btn-holidaze-tertiary {
+    background-color:#FFC424;
+    color: #ffffff;
+    border: 2px solid #FFC424;
+}
+
+.btn-holidaze-tertiary:hover {
+    color: #FFC424;
     background-color: transparent;
 }
 

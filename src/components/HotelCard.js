@@ -1,7 +1,7 @@
 import React from 'react';
 import MaxGuestsBtn from './MaxGuestsBtn';
 import PriceBtn from './PriceBtn';
-import BookNowBtn from './BookNowBtn';
+import ReadMoreBtn from './ReadMoreBtn';
 
 function HotelCard(props) {
     return (
@@ -18,7 +18,7 @@ function HotelCard(props) {
                 <p>{props.description}</p>
 
                 <div className="text-right">
-                    <BookNowBtn id={props.id} />
+                    <ReadMoreBtn id={props.id} title={"READ MORE"} />
                 </div>
             </div>
         </div>
