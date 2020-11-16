@@ -10,7 +10,7 @@ function MainMenu(props) {
     return (
         <Navbar bg="white" expand="lg" id='main-menu'>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav" class="w-100 d-flex justify-content-between align-items-center">
+            <Navbar.Collapse id="basic-navbar-nav" className="w-100 d-flex justify-content-between align-items-center">
 
                 <Nav>
                     <Nav.Link href="/hotels">Hotels</Nav.Link>
@@ -23,7 +23,7 @@ function MainMenu(props) {
 
                 <Nav>
                     <Nav.Link href="/">
-                        <img src={logo} alt='logo' class='nav-logo' />
+                        <img src={logo} alt='logo' className='nav-logo' />
                     </Nav.Link>
                 </Nav>
 

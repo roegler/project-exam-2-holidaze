@@ -32,18 +32,12 @@ function SearchBar() {
                 setIsLoading(false);
             });
     };
-
-    // Bypass client-side filtering by returning `true`. Results are already
-    // filtered by the search endpoint, so no need to do it again.
+    
     const filterBy = () => true;
 
 
     return (
-        /*<form class="search-bar">
-            <input type="text" placeholder="" />
-            
-        </form>*/
-        <form class="search-bar">
+        <form className="search-bar">
             <AsyncTypeahead
                 filterBy={filterBy}
                 id="async-example"

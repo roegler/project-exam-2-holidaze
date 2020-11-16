@@ -2,10 +2,14 @@ import React, { useState, useEffect } from "react";
 import MaxGuestsBtn from '../components/MaxGuestsBtn';
 import { useParams } from "react-router-dom";
 import PriceBtn from '../components/PriceBtn';
-import BookNowBtn from '../components/BookNowBtn';
 import Map from '../components/Map';
+import Booking from "../components/Booking";
 
 function HotelDetails() {
+    const [showBookingModal, setShowBookingModal] = useState(false);
+    const handleShowBookingModal = () => setShowBookingModal(true);
+    const handleCloseBookingModal = () => setShowBookingModal(false);
+
     const [hotel, setHotel] = useState([]);
     let { id } = useParams();
 
@@ -28,29 +32,34 @@ function HotelDetails() {
     }, [])
 
     return (
-        <div class="mt-5">
+        <div className="mt-5">
 
-            <div class="card-shadow p-5">
-                <div class="row">
-                    <div class="col-sm-7">
-                        <a href="/hotels"><svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg> Back</a>
-                        <h1 class="display-4">{hotel.name}</h1>
-                        <p class="lead">{hotel.description}</p>
-                        <div class="mb-4">
+            <div className="card-shadow p-5">
+                <div className="row">
+                    <div className="col-sm-7">
+                        <a href="/hotels"><svg className="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg> Back</a>
+                        <h1 className="display-4">{hotel.name}</h1>
+                        <p className="lead">{hotel.description}</p>
+                        <div className="mb-4">
                             <MaxGuestsBtn maxGuests={hotel.maxGuests} />
                             <PriceBtn price={hotel.price} />
                         </div>
-                        <BookNowBtn id={id} />
+                        <button type="button" className="btn btn-holidaze-primary" onClick={handleShowBookingModal}>
+                            <svg className="icon mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg> 
+                            BOOK NOW
+                        </button>
                     </div>
-                    <div class="col-sm-5 mt-5 mt-sm-0">
-                        <img src={hotel.image} alt='selected hotel' class='w-100' />
+                    <div className="col-sm-5 mt-5 mt-sm-0">
+                        <img src={hotel.image} alt='selected hotel' className='w-100' />
                     </div>
                 </div>
 
-                <hr class="my-4" />
+                <hr className="my-4" />
 
                 <Map query={hotel.lat + ',' + hotel.lng} />
             </div>
+
+            <Booking show={showBookingModal} onHide={handleCloseBookingModal}/>
         </div>
     );
 }

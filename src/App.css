@@ -96,6 +96,10 @@ a:hover {
     text-decoration: none;
 }
 
+.email-input-field {
+    width: 100%;
+}
+
 .btn-holidaze-primary {
     background-color:#DC5456;
     color: #ffffff;

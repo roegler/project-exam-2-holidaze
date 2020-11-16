@@ -26,10 +26,10 @@ function Hotels() {
     }, [])
 
     return (
-        <div class="mt-4">
-            <div class="row">
+        <div className="mt-4">
+            <div className="row">
                 {hotels.map(hotel => (
-                    <div class="col-lg-4 pb-5">
+                    <div className="col-lg-4 pb-5">
                         <HotelCard key={hotel.id} id={hotel.id} name={hotel.name} description={hotel.description} image={hotel.image} price={hotel.price} maxGuests={hotel.maxGuests} />
                     </div>
                 ))}

@@ -22,19 +22,19 @@ function App() {
       <Router>
         <Switch>
         <Route path="/hotels/:id">
-            <div class="container">
+            <div className="container">
               <HotelDetails />
             </div>
           </Route>
 
           <Route path="/hotels">
-            <div class="container">
+            <div className="container">
               <Hotels />
             </div>
           </Route>
 
           <Route path="/contact">
-            <div class="container">
+            <div className="container">
               <Contact />
             </div>
           </Route>

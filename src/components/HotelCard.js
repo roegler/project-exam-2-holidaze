@@ -5,10 +5,10 @@ import BookNowBtn from './BookNowBtn';
 
 function HotelCard(props) {
     return (
-        <div class="card-shadow">
-            <img src={props.image} alt='selected hotel' height="200" class='w-100' />
-            <div class="px-3 pb-3">
-                <div class="mt-3 mb-4">
+        <div className="card-shadow">
+            <img src={props.image} alt='selected hotel' height="200" className='w-100' />
+            <div className="px-3 pb-3">
+                <div className="mt-3 mb-4">
                     <MaxGuestsBtn maxGuests={props.maxGuests}/>
                     <PriceBtn price={props.price}/>
                 </div>
@@ -17,7 +17,7 @@ function HotelCard(props) {
                 <hr />
                 <p>{props.description}</p>
 
-                <div class="text-right">
+                <div className="text-right">
                     <BookNowBtn id={props.id} />
                 </div>
             </div>

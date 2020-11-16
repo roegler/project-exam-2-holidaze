@@ -4,11 +4,11 @@ import Map from '../components/Map';
 
 function Contact() {
     return (
-        <div class="row my-5">
-            <div class="col-sm-6">
+        <div className="row my-5">
+            <div className="col-sm-6">
                 <Map query="bergen" />
             </div>
-            <div class="col-sm-6">
+            <div className="col-sm-6">
                 <ContactForm />
             </div>
         </div>

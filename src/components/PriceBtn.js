@@ -2,7 +2,7 @@ import React from 'react';
 
 function PriceBtn(props) {
     return (
-    <span class="pill">Price from <strong>{props.price}$</strong></span>
+    <span className="pill">Price from <strong>{props.price}$</strong></span>
     );
 }
 

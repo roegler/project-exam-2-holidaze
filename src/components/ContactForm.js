@@ -37,20 +37,20 @@ function ContactForm() {
             <p>Please do not has a hesitate to contact us if anything is unclear. We are here to help.</p>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <Form.Group>
-                    <div class="row mb-3">
-                        <div class="col-sm-6">
+                    <div className="row mb-3">
+                        <div className="col-sm-6">
                             <Form.Control type="text" placeholder="Name *" name="name" ref={register} />
-                            {errors.name && <p class="text-danger pl-2"><small>{errors.name.message}</small></p>}
+                            {errors.name && <p className="text-danger pl-2"><small>{errors.name.message}</small></p>}
                         </div>
 
-                        <div class="col-sm-6">
+                        <div className="col-sm-6">
                             <Form.Control type="text" placeholder="Email *" name="email" ref={register} />
-                            {errors.email && <p class="text-danger pl-2"><small>{errors.email.message}</small></p>}
+                            {errors.email && <p className="text-danger pl-2"><small>{errors.email.message}</small></p>}
                         </div>
                     </div>
 
                     <Form.Control as="textarea" rows={3} type="text" placeholder="Message *" name="message" ref={register} />
-                    {errors.message && <p class="text-danger pl-2"><small>{errors.message.message}</small></p>}
+                    {errors.message && <p className="text-danger pl-2"><small>{errors.message.message}</small></p>}
 
                     <br />
                     <SubmitBtn />

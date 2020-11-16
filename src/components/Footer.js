@@ -8,11 +8,11 @@ function Footer() {
     return (
         <Navbar bg="white" expand="lg" id='footer-menu'>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav" class="w-100 d-flex flex-column align-items-center">
+            <Navbar.Collapse id="basic-navbar-nav" className="w-100 d-flex flex-column align-items-center">
 
                 <Nav>
                     <Nav.Link href="/">
-                        <img src={SosialIcons} alt='logo' class='nav-logo' />
+                        <img src={SosialIcons} alt='logo' className='nav-logo' />
                     </Nav.Link>
                 </Nav>
 
