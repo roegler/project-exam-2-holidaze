@@ -23,7 +23,7 @@ function HotelDetails() {
     };
 
     useEffect(() => {
-        fetch("https://us-central1-noroff-final-exam.cloudfunctions.net/api/v1/establishments" + '/' + id, requestOptions)
+        fetch("https://us-central1-noroff-final-exam.cloudfunctions.net/api/v1/establishments" + "/" + id, requestOptions)
             .then(response => response.json())
             .then(json => {
                 setHotel(json)

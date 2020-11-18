@@ -1,14 +1,12 @@
 import React from 'react';
-import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 
 import SosialIcons from '../images/social-icons.png';
 
 function Footer() {
     return (
-        <Navbar bg="white" expand="lg" id='footer-menu'>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav" className="w-100 d-flex flex-column align-items-center">
+        <Nav bg="white" expand="lg" id='footer-menu'>
+            <Nav id="basic-navbar-nav" className="w-100 d-flex flex-column align-items-center">
 
                 <Nav>
                     <Nav.Link href="/">
@@ -21,12 +19,11 @@ function Footer() {
                 </Nav>
 
                 <Nav>
-                    <small>Button icons from heroicons.dev</small>
+                    <small class="pb-3">Icons from heroicons.dev</small>
                 </Nav>
 
-
-            </Navbar.Collapse>
-        </Navbar>
+            </Nav>
+        </Nav>
     );
 }
 

@@ -1,5 +1,6 @@
 #main-menu {
     padding: 20px;
+    background-color: #ffffff;
     position: fixed;
     z-index: 9;
     top: 0;
@@ -17,8 +18,13 @@
     height: 30px;
 }
 
+#main-menu.nav {
+    display: flex;
+    margin-bottom: 0;
+}
+
 #home-page-bg {
-    background-image: url("../src/images/background-img-home.jpg");
+    background-image: url("../src/images/momentista-reR1qazgsBM-unsplash.jpg");
     background-position: center;
     width: 100vw;
 }

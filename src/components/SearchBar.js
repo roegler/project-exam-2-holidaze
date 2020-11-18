@@ -1,7 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { AsyncTypeahead } from 'react-bootstrap-typeahead';
-
-import SearchIcon from '../images/search-icon.svg';
 
 function SearchBar() {
     const [isLoading, setIsLoading] = useState(false);
