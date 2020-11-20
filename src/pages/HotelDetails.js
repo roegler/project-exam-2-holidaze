@@ -33,7 +33,6 @@ function HotelDetails() {
 
     return (
         <div className="mt-5">
-
             <div className="card-shadow p-5">
                 <div className="row">
                     <div className="col-sm-7">

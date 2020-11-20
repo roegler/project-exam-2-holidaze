@@ -1,10 +1,11 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
+import './App.scss';
 import MainMenu from './components/MainMenu';
 import HomePage from './pages/HomePage';
 import Hotels from './pages/Hotels';
 import Contact from './pages/Contact';
 import Footer from './components/Footer';
+import Login from './pages/Admin/Login';
 
 import {
   BrowserRouter as Router,
@@ -36,6 +37,12 @@ function App() {
           <Route path="/contact">
             <div className="container">
               <Contact />
+            </div>
+          </Route>
+
+          <Route path="/admin/login">
+            <div className="container">
+              <Login />
             </div>
           </Route>
 
