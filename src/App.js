@@ -6,6 +6,7 @@ import Hotels from './pages/Hotels';
 import Contact from './pages/Contact';
 import Footer from './components/Footer';
 import Login from './pages/Admin/Login';
+import Dashboard from './pages/Admin/Dashboard';
 
 import {
   BrowserRouter as Router,
@@ -13,46 +14,63 @@ import {
   Route
 } from "react-router-dom";
 import HotelDetails from './pages/HotelDetails';
+import AdminSideBar from './components/AdminSideBar';
 
 function App() {
-  const isHome = window.location.pathname === "/"
   return (
     <div className="app">
-      <MainMenu displaySearchBar={isHome === false} />
 
       <Router>
         <Switch>
-        <Route path="/hotels/:id">
+          <Route path="/hotels/:id">
+            <MainMenu displaySearchBar={true} />
             <div className="container">
               <HotelDetails />
             </div>
+            <Footer />
           </Route>
 
           <Route path="/hotels">
+            <MainMenu displaySearchBar={true} />
             <div className="container">
               <Hotels />
             </div>
+            <Footer />
           </Route>
 
           <Route path="/contact">
+            <MainMenu displaySearchBar={true} />
             <div className="container">
               <Contact />
             </div>
+            <Footer />
           </Route>
 
           <Route path="/admin/login">
             <div className="container">
               <Login />
             </div>
+            <Footer />
+          </Route>
+
+          <Route path="/admin/dashboard">
+            <AdminSideBar />
+            <div className="admin-container">
+              <div className="container">
+                <Dashboard />
+              </div>
+            </div>
           </Route>
 
           <Route path="/">
+            <MainMenu displaySearchBar={true} />
             <HomePage />
+            <Footer />
           </Route>
         </Switch>
       </Router>
 
-      <Footer />
+      
     </div >
   );
 }

@@ -33,7 +33,6 @@ function SearchBar() {
     
     const filterBy = () => true;
 
-
     return (
         <form className="search-bar">
             <AsyncTypeahead

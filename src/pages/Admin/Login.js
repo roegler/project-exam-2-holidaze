@@ -22,7 +22,7 @@ function Login() {
     });
 
     function onSubmit(data) {
-        console.log("data", data);
+        window.location="/admin/homepage"
     }
 
     return (
@@ -39,13 +39,13 @@ function Login() {
                             </div>
 
                             <div className="col-sm-4">
-                                <Form.Control type="text" placeholder="Password *" name="password" ref={register} />
+                                <Form.Control type="password" placeholder="Password *" name="password" ref={register} />
                                 {errors.password && <p className="text-danger pl-2"><small>{errors.password.message}</small></p>}
                             </div>
                         </div>
 
                         <br />
-                        <button type="button" className="btn btn-holidaze-secondary">
+                        <button type="submit" className="btn btn-holidaze-secondary">
                             SIGN IN
                         </button>
                     </Form.Group>
