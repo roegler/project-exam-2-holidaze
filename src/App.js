@@ -15,6 +15,9 @@ import {
 } from "react-router-dom";
 import HotelDetails from './pages/HotelDetails';
 import AdminSideBar from './components/AdminSideBar';
+import Enquiries from './pages/Admin/Enquiries';
+import NewMessages from './pages/Admin/NewMessages';
+import CreateEstablishment from './pages/Admin/CreateEstablishment';
 
 function App() {
   return (
@@ -58,6 +61,33 @@ function App() {
             <div className="admin-container">
               <div className="container">
                 <Dashboard />
+              </div>
+            </div>
+          </Route>
+
+          <Route path="/admin/enquiries">
+            <AdminSideBar />
+            <div className="admin-container">
+              <div className="container">
+                <Enquiries />
+              </div>
+            </div>
+          </Route>
+
+          <Route path="/admin/new-messages">
+            <AdminSideBar />
+            <div className="admin-container">
+              <div className="container">
+                <NewMessages />
+              </div>
+            </div>
+          </Route>
+
+          <Route path="/admin/create-establishment">
+            <AdminSideBar />
+            <div className="admin-container">
+              <div className="container">
+                <CreateEstablishment />
               </div>
             </div>
           </Route>
