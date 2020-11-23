@@ -21,8 +21,8 @@ function Login() {
         resolver: yupResolver(schema),
     });
 
-    function onSubmit(data) {
-        window.location="/admin/homepage"
+    function onSubmit() {
+        window.location="/admin/dashboard"
     }
 
     return (
