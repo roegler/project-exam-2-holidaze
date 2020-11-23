@@ -93,7 +93,7 @@ function App() {
           </Route>
 
           <Route path="/">
-            <MainMenu displaySearchBar={true} />
+            <MainMenu displaySearchBar={false} />
             <HomePage />
             <Footer />
           </Route>

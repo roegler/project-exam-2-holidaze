@@ -11,24 +11,37 @@ function ContactForm() {
             .string()
             .required("Name is required")
             .min(2, "Your full name must contain at least 2 characters"),
-    
+
         email: yup
             .string()
             .email('Invalid email')
             .required("Email is required"),
-    
+
         message: yup
             .string()
             .required("Message is required")
             .min(10, "Your message must contain at least 10 characters")
     });
-    
+
     const { register, handleSubmit, errors } = useForm({
         resolver: yupResolver(schema),
     });
 
     function onSubmit(data) {
-        console.log("data", data);
+        console.log("data", JSON.stringify(data));
+
+        var myHeaders = new Headers();
+        myHeaders.append("key", "5f92c26e069f2212ce387be6");
+        myHeaders.append("Content-Type", "application/json");
+
+        var requestOptions = {
+            method: 'POST',
+            headers: myHeaders,
+            body: JSON.stringify(data)
+        };
+
+        fetch("https://us-central1-noroff-final-exam.cloudfunctions.net/api/v1/contacts", requestOptions)
+            .catch(error => console.log(error));
     }
 
     return (

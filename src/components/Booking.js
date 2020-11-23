@@ -3,61 +3,64 @@ import { useForm } from "react-hook-form"
 import * as yup from "yup";
 import { yupResolver } from '@hookform/resolvers/yup';
 import Form from 'react-bootstrap/Form';
-import { Modal, closeButton } from 'react-bootstrap'
-import InquiryBtn from './InquiryBtn';
+import { Modal } from 'react-bootstrap'
+import EnquiryBtn from './EnquiryBtn';
 
 function Booking(props) {
     const schema = yup.object().shape({
-        firstName: yup
+        name: yup
             .string()
-            .required("First name is required")
-            .min(2, "Your first name must contain at least 2 characters"),
-
-        lastName: yup
-            .string()
-            .required("Last name is required")
-            .min(2, "Your last name must contain at least 2 characters"),
+            .required("Name is required")
+            .min(2, "Your name must contain at least 2 characters"),
 
         email: yup
             .string()
             .email('Invalid email')
             .required("Email is required"),
 
-        startDate: yup
+        checkIn: yup
             .string()
-            .required("Pleace select a start date for your stay"),
+            .required("Pleace select a check in date for your stay"),
 
-        endDate: yup
+        checkOut: yup
             .string()
-            .required("Pleace select a end date for your stay")
+            .required("Pleace select a check out date for your stay")
     });
 
     const { register, handleSubmit, errors } = useForm({
         resolver: yupResolver(schema),
     });
-
+    
     function onSubmit(data) {
         console.log("data", data);
-    }
 
+        var myHeaders = new Headers();
+        myHeaders.append("key", "5f92c26e069f2212ce387be6");
+        myHeaders.append("Content-Type", "application/json");
+
+        var requestOptions = {
+            method: 'POST',
+            headers: myHeaders,
+            redirect: 'follow',
+            body: JSON.stringify(data)
+        };
+
+        fetch("https://us-central1-noroff-final-exam.cloudfunctions.net/api/v1/enquiries", requestOptions)
+            .catch(error => console.log(error));
+    }
     return (
         <Modal show={props.show} onHide={props.onHide}>
-            <Modal.Header closeButton>
-                <Modal.Title>BOOK ROOM</Modal.Title>
-            </Modal.Header>
+            <form onSubmit={handleSubmit(onSubmit)}>
+                <Modal.Header closeButton>
+                    <Modal.Title>BOOK ROOM</Modal.Title>
+                </Modal.Header>
 
-            <Modal.Body>
-                <form onSubmit={handleSubmit(onSubmit)}>
+                <Modal.Body>
                     <Form.Group>
                         <div className="row">
                             <div className="col-sm-12 pb-2">
-                                <Form.Control type="text" placeholder="First name *" name="firstName" ref={register} />
-                                {errors.firstName && <p className="text-danger pl-2"><small>{errors.firstName.message}</small></p>}
-                            </div>
-
-                            <div className="col-sm-12 pb-2">
-                                <Form.Control type="text" placeholder="Last name *" name="lastName" ref={register} />
-                                {errors.lastName && <p className="text-danger pl-2"><small>{errors.lastName.message}</small></p>}
+                                <Form.Control type="text" placeholder="Full name *" name="name" ref={register} />
+                                {errors.name && <p className="text-danger pl-2"><small>{errors.name.message}</small></p>}
                             </div>
 
                             <div className="col-sm-12 pb-2">
@@ -66,51 +69,26 @@ function Booking(props) {
                             </div>
 
                             <div className="col-sm-6 pb-2">
-                                <Form.Control type="date" placeholder="Start date *" name="startDate" ref={register} />
-                                {errors.startDate && <p className="text-danger pl-2"><small>{errors.startDate.message}</small></p>}
+                                <Form.Control type="date" placeholder="Check in *" name="checkIn" ref={register} />
+                                {errors.checkIn && <p className="text-danger pl-2"><small>{errors.checkIn.message}</small></p>}
                             </div>
 
                             <div className="col-sm-6 pb-2">
-                                <Form.Control type="date" placeholder="End date *" name="endDate" ref={register} />
-                                {errors.endDate && <p className="text-danger pl-2"><small>{errors.endDate.message}</small></p>}
+                                <Form.Control type="date" placeholder="Check out *" name="checkOut" ref={register} />
+                                {errors.checkOut && <p className="text-danger pl-2"><small>{errors.checkOut.message}</small></p>}
                             </div>
 
-
-                            <div className="col-sm-6 pb-2">
-                                <label htmlFor="sel1">Select number of guests: </label>
-                                <select id="sel1" className="ml-1">
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                    <option>6</option>
-                                    <option>7</option>
-                                    <option>8</option>
-                                    <option>9</option>
-                                </select>
-                            </div>
-
-                            <div className="col-sm-6 pb-2">
-                                <label htmlFor="sel1">Select number of room: </label>
-                                <select id="sel1" className="ml-1">
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                </select>
-                            </div>
-
+                            <input type="hidden" value={props.establishmentId} name="establishmentId" ref={register} />
                         </div>
 
                     </Form.Group>
-                </form>
-            </Modal.Body>
 
-            <Modal.Footer>
-                <InquiryBtn id={props.id} title={"SUBMIT"}/>
-            </Modal.Footer>
+                </Modal.Body>
+
+                <Modal.Footer>
+                    <EnquiryBtn id={props.id} title={"SUBMIT"} />
+                </Modal.Footer>
+            </form>
         </Modal>
     );
 }

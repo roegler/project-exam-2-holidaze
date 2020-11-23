@@ -58,7 +58,7 @@ function HotelDetails() {
                 <Map query={hotel.lat + ',' + hotel.lng} />
             </div>
 
-            <Booking show={showBookingModal} onHide={handleCloseBookingModal}/>
+            <Booking show={showBookingModal} onHide={handleCloseBookingModal} establishmentId={id} />
         </div>
     );
 }

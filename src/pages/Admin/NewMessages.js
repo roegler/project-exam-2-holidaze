@@ -29,7 +29,7 @@ function NewMessages() {
         <div>
             <h1>New messages</h1>
             <div className="list-group">
-                {messages.length == 0 &&
+                {messages.length === 0 &&
                     <p>You have no new messages</p>
                 }
 

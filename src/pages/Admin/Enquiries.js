@@ -29,7 +29,7 @@ function Enquiries() {
         <div>
             <h1>New enquiries</h1>
             <div className="list-group">
-                {enquiries.length == 0 &&
+                {enquiries.length === 0 &&
                     <p>You have no enquiries</p>
                 }
                 
