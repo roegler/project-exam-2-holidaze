@@ -151,3 +151,9 @@ a {
 #footer-menu {
 	margin-top: 20px;
 }
+
+@media only screen and (max-width: 600px) {
+	.search-bar {
+		visibility: hidden;
+	}
+}
