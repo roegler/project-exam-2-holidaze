@@ -6,7 +6,6 @@ import Hotels from './pages/Hotels';
 import Contact from './pages/Contact';
 import Footer from './components/Footer';
 import Login from './pages/Admin/Login';
-import Dashboard from './pages/Admin/Dashboard';
 
 import {
   BrowserRouter as Router,
@@ -56,11 +55,11 @@ function App() {
             <Footer />
           </Route>
 
-          <Route path="/admin/dashboard">
+          <Route path="/admin/new-messages">
             <AdminSideBar />
             <div className="admin-container">
               <div className="container">
-                <Dashboard />
+                <NewMessages />
               </div>
             </div>
           </Route>
@@ -70,15 +69,6 @@ function App() {
             <div className="admin-container">
               <div className="container">
                 <Enquiries />
-              </div>
-            </div>
-          </Route>
-
-          <Route path="/admin/new-messages">
-            <AdminSideBar />
-            <div className="admin-container">
-              <div className="container">
-                <NewMessages />
               </div>
             </div>
           </Route>

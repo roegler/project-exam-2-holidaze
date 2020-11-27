@@ -22,7 +22,7 @@ function Login() {
     });
 
     function onSubmit() {
-        window.location="/admin/dashboard"
+        window.location="/admin/new-messages"
     }
 
     return (

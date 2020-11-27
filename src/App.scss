@@ -16,10 +16,19 @@
 .nav-logo {
 	height: 30px;
 }
-#main-menu.nav {
-	display: flex;
-	margin-bottom: 0;
+
+#main-menu {
+	.show {
+		.navbar-brand {
+			display: none;
+		}
+
+		.search-bar input {
+			width: 100%;
+		}
+	}
 }
+
 #home-page-bg {
 	background-image: url("../src/images/momentista-reR1qazgsBM-unsplash.jpg");
 	background-position: center;
@@ -35,7 +44,8 @@
 	align-items: center;
 	input {
 		height: 100%;
-		width: 380px;
+		max-width: 380px;
+		width: 100%;
 		border: none;
 		&:focus {
 			border: none;
@@ -152,8 +162,4 @@ a {
 	margin-top: 20px;
 }
 
-@media only screen and (max-width: 600px) {
-	.search-bar {
-		visibility: hidden;
-	}
-}
+
