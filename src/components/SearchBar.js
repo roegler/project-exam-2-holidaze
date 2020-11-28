@@ -46,7 +46,7 @@ function SearchBar() {
                     window.location="/hotels/" + hotels[0].id
                 }}
                 options={results}
-                placeholder="Find your dream hotel…"
+                placeholder="Find hotel..."
                 renderMenuItemChildren={(hotel, props) => (
                     <div>
                         <span>{hotel.name}</span>
