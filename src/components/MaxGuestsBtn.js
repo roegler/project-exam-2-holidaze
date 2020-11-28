@@ -9,5 +9,6 @@ function MaxGuestsBtn(props) {
         </span>
     );
 }
+
 export default MaxGuestsBtn;
 

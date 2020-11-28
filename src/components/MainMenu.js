@@ -8,7 +8,6 @@ import logo from '../images/logo.svg';
 
 function MainMenu(props) {
     return (
-
         <Navbar collapseOnSelect expand="lg" variant="light" id="main-menu">
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
 
