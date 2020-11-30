@@ -16,6 +16,7 @@ function Footer() {
 
                 <Nav>
                     <Nav.Link href="/contact">Contact</Nav.Link>
+                    <Nav.Link href="/admin/login">Admin</Nav.Link>
                 </Nav>
 
                 <Nav>
