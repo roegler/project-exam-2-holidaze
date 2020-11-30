@@ -5,10 +5,10 @@ function SearchBar() {
     const [isLoading, setIsLoading] = useState(false);
     const [results, setResults] = useState([]);
 
-    var myHeaders = new Headers();
+    let myHeaders = new Headers();
     myHeaders.append("key", "5f92c26e069f2212ce387be6");
 
-    var requestOptions = {
+    let requestOptions = {
         method: 'GET',
         headers: myHeaders,
         redirect: 'follow'

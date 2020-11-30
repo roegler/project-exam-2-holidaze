@@ -34,11 +34,11 @@ function Booking(props) {
     function onSubmit(data) {
         console.log("data", data);
 
-        var myHeaders = new Headers();
+        let myHeaders = new Headers();
         myHeaders.append("key", "5f92c26e069f2212ce387be6");
         myHeaders.append("Content-Type", "application/json");
 
-        var requestOptions = {
+        let requestOptions = {
             method: 'POST',
             headers: myHeaders,
             redirect: 'follow',
@@ -80,9 +80,7 @@ function Booking(props) {
 
                             <input type="hidden" value={props.establishmentId} name="establishmentId" ref={register} />
                         </div>
-
                     </Form.Group>
-
                 </Modal.Body>
 
                 <Modal.Footer>
