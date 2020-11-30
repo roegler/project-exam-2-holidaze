@@ -15,6 +15,7 @@ function MainMenu(props) {
                 <Nav>
                     <Nav.Link href="/hotels">Hotels</Nav.Link>
                     <Nav.Link href="/Contact">Contact</Nav.Link>
+                    <Nav.Link href="/admin/login">Admin</Nav.Link>
                 </Nav>
 
 
