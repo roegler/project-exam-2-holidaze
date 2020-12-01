@@ -17,7 +17,6 @@ function MainMenu(props) {
                     <Nav.Link href="/Contact">Contact</Nav.Link>
                 </Nav>
 
-
                 {props.displaySearchBar === true &&
                     <div className="form-inline my-2 my-lg-0">
                         <SearchBar />

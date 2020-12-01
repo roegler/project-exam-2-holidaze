@@ -46,6 +46,9 @@ function Booking(props) {
         };
 
         fetch("https://us-central1-noroff-final-exam.cloudfunctions.net/api/v1/enquiries", requestOptions)
+            .then (() => {
+                alert("Thank you, your booking was successfully submitted.")
+            })
             .catch(error => console.log(error));
     }
     return (

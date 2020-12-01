@@ -41,6 +41,9 @@ function ContactForm() {
         };
 
         fetch("https://us-central1-noroff-final-exam.cloudfunctions.net/api/v1/contacts", requestOptions)
+            .then(() => {
+                alert("Thank you for your enquiry. We will get back to you shortly.")
+            })
             .catch(error => console.log(error));
     }
 
