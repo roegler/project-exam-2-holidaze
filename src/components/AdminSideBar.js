@@ -5,10 +5,10 @@ import Logo_white from '../images/logo_white.svg';
 
 function AdminSideBar() {
     return (
-        <div class="side-bar">
-            <div class="list-group">
+        <div className="side-bar">
+            <div className="list-group">
                 <div className="mb-4">
-                    <img src={Logo_white} alt='logo' />
+                    <img src={Logo_white} alt='logo' className="admin-logo" />
                 </div>
                 <NavLink to="/admin/new-messages" activeClassName="active"
                     className="list-group-item list-group-item-action">New messages

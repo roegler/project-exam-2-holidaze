@@ -1,11 +1,11 @@
 @font-face {
 	font-family: "muli", Arial, Helvetica, sans-serif;
 	src: url(./Fonts/muli.regular.ttf);
-  }
+}
 
-  body {
-	  font-family: "muli";
-  }
+body {
+	font-family: "muli";
+}
 
 /* async typeahead */
 #main-menu {
@@ -139,7 +139,7 @@ a {
     width: 25%;
     margin-top: -104px; // to remove the default padding and margin on .app class
     float: left;
-    padding: 20px;
+	padding: 20px;
 
     .list-group-item {
         background-color: transparent;
@@ -155,6 +155,12 @@ a {
 .admin-container {
     width: 75%;
     float: left;
+}
+
+// to make the logo responsive. the class do not work.
+.admin-logo {
+	max-width: 270px;
+	width: 100%;
 }
 
 .icon {
