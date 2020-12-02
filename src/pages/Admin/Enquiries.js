@@ -4,6 +4,7 @@ function Enquiries() {
 
     let myHeaders = new Headers();
     myHeaders.append("key", "5f92c26e069f2212ce387be6");
+    myHeaders.append("Content-Type", "application/json");
 
     let requestOptions = {
         method: 'GET',

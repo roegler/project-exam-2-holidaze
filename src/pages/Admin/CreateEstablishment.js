@@ -45,31 +45,40 @@ function CreateEstablishment() {
 
     });
 
-    let myHeaders = new Headers();
-    myHeaders.append("key", "5f92c26e069f2212ce387be6");
-
-    let requestOptions = {
-        method: 'GET',
-        headers: myHeaders,
-        redirect: 'follow'
-    };
-
-    useEffect(() => {
-        fetch("https://us-central1-noroff-final-exam.cloudfunctions.net/api/v1/establishments", requestOptions)
-            .then(response => response.json())
-            .then(json => {
-                console.log(json)
-            })
-            .catch(error => console.log(error));
-    }, [])
-
     const { register, handleSubmit, errors } = useForm({
         resolver: yupResolver(schema),
     });
 
     function onSubmit(data) {
         console.log("data", data);
+
+        let myHeaders = new Headers();
+        myHeaders.append("key", "5f92c26e069f2212ce387be6");
+        myHeaders.append("Content-Type", "application/json");
+
+        let requestOptions = {
+            method: 'POST',
+            headers: myHeaders,
+            redirect: 'follow',
+            body: JSON.stringify(data)
+        };
+     
+            fetch("https://us-central1-noroff-final-exam.cloudfunctions.net/api/v1/establishments", requestOptions)
+                .then(response => response.json())
+                .then(json => {
+                    console.log(json)
+                })
+                .catch(error => console.log(error));
+
     }
+
+    /*const { register, handleSubmit, errors } = useForm({
+        resolver: yupResolver(schema),
+    });
+
+    function onSubmit(data) {
+        console.log("data", data);
+    }*/
 
     return (
         <div>

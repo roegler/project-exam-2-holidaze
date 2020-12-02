@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { AsyncTypeahead } from 'react-bootstrap-typeahead';
 
 function SearchBar() {
