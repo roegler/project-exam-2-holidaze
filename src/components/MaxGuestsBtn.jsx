@@ -1,5 +1,3 @@
-import React from 'react';
-
 function MaxGuestsBtn(props) {
     return (
         <span className="pill">

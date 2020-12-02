@@ -1,4 +1,3 @@
-import React from 'react';
 import Nav from 'react-bootstrap/Nav';
 
 import SosialIcons from '../images/social-icons.png';

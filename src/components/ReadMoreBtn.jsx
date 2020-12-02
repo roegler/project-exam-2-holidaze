@@ -1,5 +1,3 @@
-import React from 'react';
-
 function ReadMoreBtn(props) {
     return(
         <a type="button" className="btn btn-holidaze-secondary" href={'/hotels/' + props.id}>

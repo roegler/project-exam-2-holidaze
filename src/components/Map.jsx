@@ -1,5 +1,3 @@
-import React from 'react';
-
 function Map(props) {
     return (
         <div id="map-container-google-9" className="z-depth-1-half map-container-5">

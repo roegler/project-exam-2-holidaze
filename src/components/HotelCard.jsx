@@ -1,4 +1,3 @@
-import React from 'react';
 import MaxGuestsBtn from './MaxGuestsBtn';
 import PriceBtn from './PriceBtn';
 import ReadMoreBtn from './ReadMoreBtn';

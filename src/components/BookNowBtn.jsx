@@ -1,5 +1,3 @@
-import React from 'react';
-
 function BookNowBtn(props) {
     return(
         <a type="button" className="btn btn-holidaze-primary" href={'/hotels/' + props.id}>

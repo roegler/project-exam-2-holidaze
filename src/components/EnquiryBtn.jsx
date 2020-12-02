@@ -1,5 +1,3 @@
-import React from 'react';
-
 function EnquiryBtn(props) {
     return (
         <button type="submit" className="btn btn-holidaze-tertiary" href={'/hotels/' + props.id}>

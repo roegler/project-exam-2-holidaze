@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import MaxGuestsBtn from '../components/MaxGuestsBtn';
 import { useParams } from "react-router-dom";
 import PriceBtn from '../components/PriceBtn';
