@@ -61,23 +61,14 @@ function CreateEstablishment() {
             redirect: 'follow',
             body: JSON.stringify(data)
         };
-     
-            fetch("https://us-central1-noroff-final-exam.cloudfunctions.net/api/v1/establishments", requestOptions)
-                .then(response => response.json())
-                .then(json => {
-                    console.log(json)
-                })
-                .catch(error => console.log(error));
 
+        fetch("https://us-central1-noroff-final-exam.cloudfunctions.net/api/v1/establishments", requestOptions)
+            .then(response => response.json())
+            .then(json => {
+                console.log(json)
+            })
+            .catch(error => console.log(error));
     }
-
-    /*const { register, handleSubmit, errors } = useForm({
-        resolver: yupResolver(schema),
-    });
-
-    function onSubmit(data) {
-        console.log("data", data);
-    }*/
 
     return (
         <div>
@@ -119,11 +110,6 @@ function CreateEstablishment() {
                         <div className="col-sm-6 mb-3">
                             <Form.Control as="textarea" rows={3} type="text" placeholder="Description *" name="description" ref={register} />
                             {errors.description && <p className="text-danger pl-2"><small>{errors.description.message}</small></p>}
-                        </div>
-
-                        <div className="col-sm-6 mb-3">
-                            <Form.Control type="file" placeholder="Image *" name="image" ref={register} />
-                            {errors.image && <p className="text-danger pl-2"><small>{errors.image.message}</small></p>}
                         </div>
 
                     </div>

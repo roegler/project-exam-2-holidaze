@@ -91,12 +91,16 @@ body {
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .card-shadow {
-	max-width: 500px;
-	width: 100%;
 	box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
 	border-radius: 20px;
 	overflow: hidden;
 }
+
+.login-card {
+	max-width: 500px;
+	width: 100%;
+}
+
 a {
 	color: #DC5456;
 	&:hover {
@@ -136,14 +140,15 @@ a {
 }
 
 .side-bar {
+	position: fixed;
+	top: 0;
+	left: 0;
     background-color: #404040;
-    height: 100vh;
+    height: 100%;
     width: 25%;
-    margin-top: -104px; // to remove the default padding and margin on .app class
-    float: left;
 	padding: 20px;
 
-	// to make the logo responsive. the class do not work.
+	// to make the logo responsive
 	.admin-logo {
 		max-width: 100%;
 		width: 270px;
@@ -162,7 +167,7 @@ a {
 
 .admin-container {
     width: 75%;
-    float: left;
+    margin-left: 25%;
 }
 
 .icon {

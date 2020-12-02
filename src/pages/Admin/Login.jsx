@@ -26,18 +26,18 @@ function Login() {
 
     return (
         <div className="d-flex justify-content-center">
-            <div className="card-shadow p-5">
+            <div className="card-shadow login-card p-5">
                 <h1>Login to Holidaze admin page</h1>
                 <p>Please enter you username and password.</p>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <Form.Group>
                         <div className="row mb-3 d-flex flex-column">
-                            <div className="col-sm-10 pb-3">
+                            <div className="col-sm-12 pb-3">
                                 <Form.Control type="text" placeholder="Username *" name="username" ref={register} />
                                 {errors.username && <p className="text-danger pl-2"><small>{errors.username.message}</small></p>}
                             </div>
 
-                            <div className="col-sm-10">
+                            <div className="col-sm-12">
                                 <Form.Control type="password" placeholder="Password *" name="password" ref={register} />
                                 {errors.password && <p className="text-danger pl-2"><small>{errors.password.message}</small></p>}
                             </div>
