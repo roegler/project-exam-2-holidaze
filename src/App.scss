@@ -4,7 +4,7 @@
 }
 
 body {
-	font-family: "muli";
+	font-family: "muli", Arial, Helvetica, sans-serif;
 }
 
 /* async typeahead */
@@ -143,6 +143,12 @@ a {
     float: left;
 	padding: 20px;
 
+	// to make the logo responsive. the class do not work.
+	.admin-logo {
+		max-width: 100%;
+		width: 270px;
+	}
+
     .list-group-item {
         background-color: transparent;
         color: #ffffff;
@@ -157,12 +163,6 @@ a {
 .admin-container {
     width: 75%;
     float: left;
-}
-
-// to make the logo responsive. the class do not work.
-.admin-logo {
-	max-width: 270px;
-	width: 100%;
 }
 
 .icon {
