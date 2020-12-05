@@ -19,7 +19,7 @@ function Footer() {
                 </Nav>
 
                 <Nav>
-                    <small class="pb-3">Icons from heroicons.dev</small>
+                    <small className="pb-3">Icons from heroicons.dev</small>
                 </Nav>
 
             </Nav>

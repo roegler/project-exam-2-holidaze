@@ -2,26 +2,25 @@ import { useState, useEffect } from "react";
 
 function Enquiries() {
 
-    let myHeaders = new Headers();
-    myHeaders.append("key", "5f92c26e069f2212ce387be6");
-    myHeaders.append("Content-Type", "application/json");
-
-    let requestOptions = {
-        method: 'GET',
-        headers: myHeaders,
-        redirect: 'follow'
-    };
-
     // Storage
     const [enquiries, setEnquiries] = useState([]);
 
     // Getting the enquiries from API
     useEffect(() => {
+        let myHeaders = new Headers();
+        myHeaders.append("key", "5f92c26e069f2212ce387be6");
+        myHeaders.append("Content-Type", "application/json");
+    
+        let requestOptions = {
+            method: 'GET',
+            headers: myHeaders,
+            redirect: 'follow'
+        };
+
         fetch("https://us-central1-noroff-final-exam.cloudfunctions.net/api/v1/enquiries", requestOptions)
             .then(response => response.json())
             .then(json => {
                 setEnquiries(json)
-                console.log(json)
             })
             .catch(error => console.log(error));
     }, [])
@@ -35,7 +34,7 @@ function Enquiries() {
                 }
                 
                 {enquiries.map(enquirie => (
-                    <div href="#" className="list-group-item list-group-item-action">
+                    <div key={enquirie.id} className="list-group-item list-group-item-action">
                         <p>
                             <strong>
                                 {enquirie.name}<br />

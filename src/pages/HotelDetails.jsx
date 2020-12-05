@@ -13,23 +13,24 @@ function HotelDetails() {
     const [hotel, setHotel] = useState([]);
     let { id } = useParams();
 
-    let myHeaders = new Headers();
-    myHeaders.append("key", "5f92c26e069f2212ce387be6");
-
-    let requestOptions = {
-        method: 'GET',
-        headers: myHeaders,
-        redirect: 'follow'
-    };
-
     useEffect(() => {
-        fetch("https://us-central1-noroff-final-exam.cloudfunctions.net/api/v1/establishments" + "/" + id, requestOptions)
+
+        let myHeaders = new Headers();
+        myHeaders.append("key", "5f92c26e069f2212ce387be6");
+
+        let requestOptions = {
+            method: 'GET',
+            headers: myHeaders,
+            redirect: 'follow'
+        };
+
+        fetch("https://us-central1-noroff-final-exam.cloudfunctions.net/api/v1/establishments/" + id, requestOptions)
             .then(response => response.json())
             .then(json => {
                 setHotel(json)
             })
             .catch(error => console.log(error));
-    }, [])
+    },[id])
 
     return (
         <div className="mt-5">
@@ -44,7 +45,7 @@ function HotelDetails() {
                             <PriceBtn price={hotel.price} />
                         </div>
                         <button type="button" className="btn btn-holidaze-primary" onClick={handleShowBookingModal}>
-                            <svg className="icon mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg> 
+                            <svg className="icon mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
                             BOOK NOW
                         </button>
                     </div>
